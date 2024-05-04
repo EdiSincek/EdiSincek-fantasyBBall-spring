@@ -1,6 +1,6 @@
 package com.fantasy.stats.springfantasystats.services.UserService;
 
-import com.fantasy.stats.springfantasystats.models.user.User;
+import com.fantasy.stats.springfantasystats.models.User.User;
 import com.fantasy.stats.springfantasystats.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

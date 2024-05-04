@@ -1,6 +1,6 @@
 package com.fantasy.stats.springfantasystats.controllers;
 
-import com.fantasy.stats.springfantasystats.models.user.User;
+import com.fantasy.stats.springfantasystats.models.User.User;
 import com.fantasy.stats.springfantasystats.services.UserService.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

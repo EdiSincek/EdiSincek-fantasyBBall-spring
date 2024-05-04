@@ -1,4 +1,4 @@
-package com.fantasy.stats.springfantasystats.models.user;
+package com.fantasy.stats.springfantasystats.models.User;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
