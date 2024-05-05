@@ -1,6 +1,6 @@
 package com.fantasy.stats.springfantasystats.repositories;
 
-import com.fantasy.stats.springfantasystats.models.User.User;
+import com.fantasy.stats.springfantasystats.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
