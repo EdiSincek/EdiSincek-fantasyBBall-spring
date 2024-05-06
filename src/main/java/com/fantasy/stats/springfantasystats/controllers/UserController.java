@@ -3,9 +3,9 @@ package com.fantasy.stats.springfantasystats.controllers;
 import com.fantasy.stats.springfantasystats.models.User;
 import com.fantasy.stats.springfantasystats.services.UserService.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +23,11 @@ public class UserController {
     @GetMapping("/allUsers")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
+    }
+
+    @PostMapping("/createUser")
+    public ResponseEntity<User> createUser(@RequestBody User user) {
+        User createdUser = userService.createUser(user);
+        return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
     }
 }

@@ -19,4 +19,9 @@ public class LeagueServiceImpl implements LeagueService {
     public LeaguesYahoo getLeagueBasicInfoById(Integer leagueId) {
         return leagueRepository.findById(leagueId).orElse(null);
     }
+
+    @Override
+    public LeaguesYahoo addLeague(LeaguesYahoo league) {
+        return leagueRepository.save(league);
+    }
 }
