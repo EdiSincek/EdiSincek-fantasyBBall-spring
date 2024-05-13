@@ -1,5 +1,6 @@
 package com.fantasy.stats.springfantasystats.services.LeagueService;
 
+import com.fantasy.stats.springfantasystats.exceptions.LeagueNotFoundException;
 import com.fantasy.stats.springfantasystats.models.LeaguesYahoo;
 import com.fantasy.stats.springfantasystats.repositories.LeagueRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,9 @@ public class LeagueServiceImpl implements LeagueService {
 
     @Override
     public LeaguesYahoo getLeagueBasicInfoById(Integer leagueId) {
-        return leagueRepository.findById(leagueId).orElse(null);
+        return leagueRepository.findById(leagueId)
+                .orElseThrow(
+                        () -> new LeagueNotFoundException("League with id " + leagueId + " not found."));
     }
 
     @Override
