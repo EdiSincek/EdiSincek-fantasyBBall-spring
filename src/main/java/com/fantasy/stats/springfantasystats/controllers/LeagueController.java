@@ -21,11 +21,7 @@ public class LeagueController {
     @GetMapping("/{leagueId}")
     public ResponseEntity<LeaguesYahoo> getLeague(@PathVariable Integer leagueId) {
         LeaguesYahoo league = leagueService.getLeagueBasicInfoById(leagueId);
-        if (league == null) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        } else {
-            return new ResponseEntity<>(league, HttpStatus.OK);
-        }
+        return new ResponseEntity<>(league, HttpStatus.OK);
     }
 
     @PostMapping("/addLeague")
